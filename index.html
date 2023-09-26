@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>T2CG</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            cursor: none;
+            /* Oculta o cursor padrão */
+        }
+
+        .cursor-point {
+            position: absolute;
+            width: 4px;
+            /* Largura do ponto do cursor */
+            height: 4px;
+            /* Altura do ponto do cursor */
+            background-color: rgb(12, 253, 4);
+            /* Cor do ponto do cursor */
+            border-radius: 50%;
+            /* Torna-o circular */
+            pointer-events: none;
+            /* Evita que o cursor interaja com o ponto */
+            transform: translate(18500%, -9999%);
+            /* Move o ponto para que o centro corresponda ao cursor */
+            transition: opacity 0.2s ease-in-out;
+            /* Adiciona uma transição suave para o ponto */
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var spheres = [];
+        var objectPositions = [
+            [-10, 0, -500],  // Posição do objeto original
+            [-50, 0, 300],       // Posição do objeto replicado 1
+            [500, 0, -50],    // Posição do objeto replicado 2
+            [-300, 0, -800],      // Posição do objeto replicado 3
+            [-10, 50, 50],    // Posição do objeto replicado 4
+        ];
+        var objs = objectPositions.map((position) => {
+            return {
+                position, visible: true
+            }
+        });
+    </script>
+    <div id="wrapper">
+        <canvas class="webgl" id="canvas" width="1420" height="720"></canvas>
+    </div>
+
+    <script src="https://twgljs.org/dist/4.x/twgl-full.min.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/3d-math.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/m4.js"></script>
+    <script src="https://webglfundamentals.org/webgl/resources/primitives.js"></script>
+
+    <script type="text/javascript" src="control_points.js"></script>
+    <script type="text/javascript" src="camera.js"></script>
+
+    <!-- Ponto do cursor -->
+    <div class="cursor-point"></div>
+
+    <script id="skybox_vs" type="x-shader/x-fragment">
+        attribute vec4 a_position;
+        varying vec4 v_position;
+        void main() {
+            v_position = a_position;
+            gl_Position = a_position;
+            gl_Position.z = 1.0;
+        }
+    </script>
+    <script id="skybox_fs" type="x-shader/x-fragment">
+            precision mediump float;
+            
+            uniform samplerCube u_skybox;
+            uniform mat4 u_viewDirectionProjectionInverse;
+            
+            varying vec4 v_position;
+            void main() {
+                vec4 t = u_viewDirectionProjectionInverse * v_position;
+                gl_FragColor = textureCube(u_skybox, normalize(t.xyz / t.w));
+            }
+        </script>
+
+    <script type="module" src="skybox.js"></script>
+    <script type="module" src="terrain.js"></script>
+    <script type="module" src="obj.js"></script>
+</body>
+
+</html>
