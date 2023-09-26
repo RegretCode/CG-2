@@ -30,7 +30,7 @@ Siga estas etapas para executar o projeto:
 2. Abra o arquivo index.html em um navegador da web compatível com WebGL2.
 3. No Visual Studio Code (VSC), certifique-se de ter o Live Server instalado e use o comando Alt + L Alt + O para abrir o arquivo em um servidor local.
 
-Ou veja pelo navegador seguindo esse [link](https://regretcode.github.io/CG-2/).
+Ou veja pelo navegador seguindo esse [link](https://regretcode.github.io/CG-2/) (obs. pode demorar um pouco para carregar). 
 
 ### Como Interagir com a Cena
 
