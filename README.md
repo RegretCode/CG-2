@@ -41,4 +41,4 @@ A interação com a cena é simples e envolve os seguintes passos:
 - Você pode mover a câmera ou realizar outras ações específicas de acordo com a lógica de interação implementada no projeto. Certifique-se de explorar e experimentar para obter a melhor experiência visual.
 
 ## Licença
-Este projeto está licenciado sob a Licença XYZ - consulte o arquivo [LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) para obter detalhes.
+Este projeto está licenciado sob a `Licença` - consulte o arquivo [LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) para obter detalhes.
