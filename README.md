@@ -56,4 +56,5 @@ Outros links:
 - [Link](https://sbcode.net/topoearth/moon-heightmap/) para imagem utilizada como heightmap.
 
 ## Licença
-Este projeto está licenciado sob a `Licença` - consulte o arquivo [LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) para obter detalhes.
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) para obter mais informações.
