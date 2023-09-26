@@ -1,6 +1,6 @@
 # Trabalho 2 de Computação Gráfica
 
-Height Map com Movimento de Câmera e Disparo de esferas.
+Heightmap com movimento de câmera e disparo de esferas.
 
 ## Tecnologias Utilizadas
 
@@ -39,6 +39,21 @@ A interação com a cena é simples e envolve os seguintes passos:
 - Passe o mouse sobre o canvas da cena.
 - Utilize o botão esquerdo do mouse para interagir com a visualização.
 - Você pode mover a câmera ou realizar outras ações específicas de acordo com a lógica de interação implementada no projeto. Certifique-se de explorar e experimentar para obter a melhor experiência visual.
+
+## Créditos
+
+Este trabalho foi criado com base nos códigos: 
+
+- [skybox](https://webgl2fundamentals.org/webgl/lessons/webgl-skybox.html);
+- [terrain](https://webgl2fundamentals.org/webgl/lessons/webgl-qna-drawing-a-heightmap.html);
+- [obj](https://webgl2fundamentals.org/webgl/lessons/webgl-load-obj-w-mtl.html);
+- [sphere](https://webgl2fundamentals.org/webgl/lessons/webgl-drawing-multiple-things.html).
+
+Outros links:
+
+- [Link](https://www.turbosquid.com/3d-models/u-f-o-max-free/167887) para o objeto que foi utilizado;
+- [Link](https://sbcode.net/topoearth/moon-texture/) para textura utilizada no heightmap;
+- [Link](https://sbcode.net/topoearth/moon-heightmap/) para imagem utilizada como heightmap.
 
 ## Licença
 Este projeto está licenciado sob a `Licença` - consulte o arquivo [LICENSE](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) para obter detalhes.
