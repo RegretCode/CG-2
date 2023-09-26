@@ -1,6 +1,6 @@
 # Trabalho 2 de Computação Grafica
 
-Height Map com Movimento de Câmera e Disparo de Bolas
+Height Map com Movimento de Câmera e Disparo de esferas.
 
 ## Tecnologias Utilizadas
 
